@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="store.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Home">
+            <img src="img/logo.jpg" alt="Server Logo">
+        </a>
+        <nav>
+            <a href="store.html"><span class="material-symbols-outlined">arrow_back</span>Back to store</a>
+        </nav>
+    </header>
+
+    <main class="checkout">
+        <!-- Step 1: review + details -->
+        <section id="checkout-form-view">
+            <h2>Checkout</h2>
+
+            <div id="order-lines" class="order-box"></div>
+            <div class="cart-total"><span>Total</span><strong id="order-total">$0.00</strong></div>
+
+            <form id="checkout-form" class="order-form" novalidate>
+                <label for="mc-name">Minecraft username</label>
+                <input id="mc-name" type="text" maxlength="16" placeholder="Steve" autocomplete="off" required>
+
+                <label for="mc-email">Email (for the receipt)</label>
+                <input id="mc-email" type="email" maxlength="80" placeholder="you@example.com" required>
+
+                <p id="form-error" class="form-error" role="alert" hidden></p>
+
+                <button class="btn btn-big" type="submit">
+                    <span class="material-symbols-outlined">lock</span> Confirm purchase
+                </button>
+            </form>
+        </section>
+
+        <!-- Step 2: confirmation -->
+        <section id="done-view" hidden>
+            <h2>Order placed</h2>
+            <p>Thank you! Keep your order ID if you need support.</p>
+            <div id="done-id" class="msg-id"></div>
+            <div id="done-lines" class="order-box"></div>
+            <div class="cart-total"><span>Total</span><strong id="done-total"></strong></div>
+            <a id="pay-btn" class="btn btn-big" href="payment.html">
+                <span class="material-symbols-outlined">payments</span> Go to payment
+            </a>
+            <a class="btn btn-ghost" href="store.html">Back to store</a>
+        </section>
+
+        <!-- Empty cart -->
+        <section id="empty-view" hidden>
+            <h2>Nothing to buy yet</h2>
+            <p>Your cart is empty.</p>
+            <a class="btn btn-big" href="store.html">Go to the store</a>
+        </section>
+    </main>
+
+    <script src="ids.js"></script>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+</body>
+
+</html>

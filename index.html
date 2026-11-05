@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        none
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <section id="community" class="community">
+            <h2>Community</h2>
+
+            <form id="post-form" class="post-form">
+                <input type="text" id="post-name" placeholder="Your name (optional)" maxlength="20">
+                <input type="text" id="post-title" placeholder="Title" maxlength="80" required>
+                <textarea id="post-text" placeholder="Write your question or opinion..." maxlength="500"
+                    required></textarea>
+                <button type="submit">Post</button>
+            </form>
+
+            <div id="posts"></div>
+        </section>
+
+        <script src="ids.js"></script>
+        <script src="community.js"></script>
+        <a href="index.html" class="logo" aria-label="Home">
+            <img src="img/logo.jpg" alt="Server Logo">
+        </a>
+
+        <nav>
+            <a href="#news">
+                <span class="material-symbols-outlined">news</span>
+                News
+            </a>
+
+            <a href="#about">
+                <span class="material-symbols-outlined">info</span>
+                About Server
+            </a>
+
+            <a href="#community">
+                <span class="material-symbols-outlined">groups</span>
+                Community
+            </a>
+        </nav>
+
+        <form class="search-box" action="search.html" method="get" role="search">
+            <input type="search" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Search">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </form>
+    </header>
+    <main>
+
+    </main>
+</body>
+
+</html>

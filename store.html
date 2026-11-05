@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="store.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Home">
+            <img src="img/logo.jpg" alt="Server Logo">
+        </a>
+
+        <nav>
+            <a href="index.html#news"><span class="material-symbols-outlined">news</span>News</a>
+            <a href="index.html#about"><span class="material-symbols-outlined">info</span>About Server</a>
+            <a href="index.html#community"><span class="material-symbols-outlined">groups</span>Community</a>
+            <a href="store.html"><span class="material-symbols-outlined">storefront</span>Store</a>
+            <a href="store.html#cart" class="cart-link">
+                <span class="material-symbols-outlined">shopping_cart</span>Cart
+                <span id="cart-badge" class="cart-badge" hidden>0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="store">
+        <section class="products-area">
+            <h2>Ranks</h2>
+            <div id="ranks" class="grid"></div>
+
+            <h2>Items</h2>
+            <div id="items" class="grid"></div>
+        </section>
+
+        <aside id="cart" class="cart-panel">
+            <h2>Your Cart</h2>
+            <div id="cart-lines"></div>
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cart-total">$0.00</strong>
+            </div>
+            <a id="checkout-btn" class="btn btn-big" href="checkout.html">
+                <span class="material-symbols-outlined">shopping_bag</span> Go to checkout
+            </a>
+            <button id="clear-btn" class="btn btn-ghost" type="button">Clear cart</button>
+        </aside>
+    </main>
+
+    <script src="ids.js"></script>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="store.js"></script>
+</body>
+
+</html>
